@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  /*Fazemos a conta 16 * 0,625 temos 10px. Não pode usar unidade de medida fixa, precisa ser relativa*/
+  font-size: 62.5%; /*10px*/
+}
+
+body {
+  background: #ECE9FD;
+  padding: 6.0rem 2.3rem 6.6rem;
+  font-size: 1.6rem;
+  font-family: 'Epilogue';
+}
+
+main {
+  /*Largura máxima da caixa*/
+  max-width: 33.0rem;
+  /*Alinhar o conteudo no meio da tela*/
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 800;
+  font-family: 'Epilogue', sans-serif;
+  /*px é a unidade medida fixa, não rola para responsividade, precisamos mudar para unidade de medida flexivo*/
+  /*REM = Root EM pega o px do navegador 1 rem equivale = 16px. É pegar 16px e multiplicar para 2.5 16*2.5=40px*/
+  font-size: 4.0rem;
+  line-height: 4.8rem;
+  color: #090039;
+  margin-bottom: 1.5rem;
+}
+
+/*Pegando o primeiro p dentro de main*/
+main p:first-child {
+  color: #7158ef;
+  /*Colocando espaçamento entre as letras*/
+  letter-spacing: 3px;
+  /*Deixando as letras em caixa alta*/
+  text-transform: uppercase;
+  line-height: 3.2rem;
+
+  margin-bottom: 1.7rem;
+}
+
+h1 + p {
+  color: rgba(10,0,57,0.64);
+  line-height: 3.2rem;
+
+  margin-bottom: 3.2rem;
+}
+
+a {
+  color: #090039;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7158ef;
+  font-weight: bold;
+}
+
+ul {
+  margin-top: 7.2rem;
+}
+
+ul li {
+  color: #090039;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+
+  max-width: 25.7rem;
+  display: flex;
+  /*Display flex já vem align-item padrão, vai alinhar os itens a cima
+  align-items: flex-start;*/
+  gap: 3.8rem;
+}
+
+ul li + li {
+  margin-top: 3.2rem;
+}
+
+ul li span {
+  color: #090039;
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8.0rem;
+  letter-spacing: -2px;
+}
+
+/*Medida queries que faz o ajuste do tamanho da nossa*/
+/*De 500px para CIMA adicionar essa cor ao body*/
+@media (min-width: 700px) {
+
+  body {
+    padding: 8rem;
+  }
+
+  main {
+    display: flex;
+    max-width: 1020px;
+    gap: 10rem;
+  }
+
+  main > div {
+    max-width: 484px;
+  }
+
+  ul li {
+    
+    gap: 5.3rem;
+    max-width: 400px;
+    align-items: center;
+  }
+
+  ul li + li {
+    margin-top: 3.2rem;
+  }
+}
