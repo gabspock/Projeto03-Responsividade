@@ -96,6 +96,19 @@ ul li span {
   letter-spacing: -2px;
 }
 
+#made {
+    font-size: 0.87rem;
+    color: #444444;
+    text-align: center;
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+
+#made a {
+    color: #8d8d8d;
+    text-decoration: none;
+}
+
 /*Medida queries que faz o ajuste do tamanho da nossa*/
 /*De 500px para CIMA adicionar essa cor ao body*/
 @media (min-width: 700px) {
@@ -124,4 +137,5 @@ ul li span {
   ul li + li {
     margin-top: 3.2rem;
   }
+
 }
